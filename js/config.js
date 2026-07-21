@@ -103,7 +103,7 @@ const CONFIG = {
             descripcion: 'Proyecto integral de movilidad: pistas, veredas, drenaje pluvial, iluminación LED y espacios verdes. Transformación total de la zona urbana.',
             rubro: 'Proyectos Integrales',
             monto: 'S/ 130,060.82',
-            image: '[AGREGAR FOTO]'
+            image: 'images/pista_5.jpg'
         }
     ],
 
