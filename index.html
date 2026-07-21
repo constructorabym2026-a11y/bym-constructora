@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Constructora B&M - Obras civiles, infraestructura vial, pistas, veredas y proyectos integrales en Lima">
+    <meta name="keywords" content="construcción, pistas, veredas, infraestructura, movilidad urbana, Lima, Comas">
+    <meta name="author" content="Constructora B&M S.A.C.">
+    <title>Constructora y Proyectos B&M | Infraestructura Vial y Urbana</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER + NAVEGACIÓN -->
+    <header class="header">
+        <div class="header__container">
+            <a href="#inicio" class="header__logo">
+                <img src="images/logo.png" alt="Logo BYM" class="logo__img">
+                <span class="logo__text">B&M</span>
+            </a>
+            <nav class="nav">
+                <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav__menu" id="navMenu">
+                    <li><a href="#inicio" class="nav__link" data-scroll>Inicio</a></li>
+                    <li><a href="#nosotros" class="nav__link" data-scroll>Nosotros</a></li>
+                    <li><a href="#servicios" class="nav__link" data-scroll>Servicios</a></li>
+                    <li><a href="#proyectos" class="nav__link" data-scroll>Proyectos</a></li>
+                    <li><a href="#contacto" class="nav__link" data-scroll>Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SLIDER HERO -->
+    <section class="hero" id="inicio">
+        <div class="slider" id="sliderContainer">
+            <div class="slider__item" style="background-image: url('images/pista_1.jpg')">
+                <div class="slider__overlay"></div>
+                <div class="slider__content">
+                    <h1>Constructora y Proyectos B&M</h1>
+                    <p>Proyectos sólidos, resultados reales</p>
+                    <div class="slider__buttons">
+                        <a href="#contacto" class="btn btn--primary">Contactar</a>
+                        <a href="#proyectos" class="btn btn--secondary">Ver Proyectos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider__item" style="background-image: url('images/pista_2.jpg')">
+                <div class="slider__overlay"></div>
+                <div class="slider__content">
+                    <h1>Infraestructura Vial de Calidad</h1>
+                    <p>Pistas, veredas y movilidad urbana integral</p>
+                    <div class="slider__buttons">
+                        <a href="#servicios" class="btn btn--primary">Nuestros Servicios</a>
+                        <a href="#proyectos" class="btn btn--secondary">Galería</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider__item" style="background-image: url('images/pista_3.jpg')">
+                <div class="slider__overlay"></div>
+                <div class="slider__content">
+                    <h1>Comprometidos con la Calidad</h1>
+                    <p>ISO 9001, 45001, 37001, 14001 certificados</p>
+                    <div class="slider__buttons">
+                        <a href="#certificaciones" class="btn btn--primary">Certificaciones</a>
+                        <a href="#contacto" class="btn btn--secondary">Solicitar Cotización</a>
+                    </div>
+                </div>
+            </div>
+            <button class="slider__nav slider__nav--prev" id="sliderPrev" aria-label="Anterior">❮</button>
+            <button class="slider__nav slider__nav--next" id="sliderNext" aria-label="Siguiente">❯</button>
+            <div class="slider__dots" id="sliderDots"></div>
+        </div>
+    </section>
+
+    <!-- ESTADÍSTICAS -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats__grid">
+                <div class="stats__item">
+                    <div class="stats__number">3+</div>
+                    <div class="stats__label">Obras Entregadas</div>
+                </div>
+                <div class="stats__item">
+                    <div class="stats__number">4+</div>
+                    <div class="stats__label">Años Experiencia</div>
+                </div>
+                <div class="stats__item">
+                    <div class="stats__number">3+</div>
+                    <div class="stats__label">Clientes Satisfechos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUIÉNES SOMOS -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <h2 class="section__title">Quiénes Somos</h2>
+            <div class="about__content">
+                <div class="about__text">
+                    <p>Constructora y Proyectos B&M S.A.C. es una empresa especializada en la ejecución de obras civiles en general, instalaciones de proyectos eléctricos e hidroeléctricos, supervisión de construcciones y prestación de servicios de ingeniería.</p>
+                    <p>Desde 2022, mantenemos los más altos estándares de calidad, brindando asesoría a entidades públicas y privadas. Garantizamos cumplimiento riguroso de plazos y seriedad en nuestra gestión.</p>
+                    <button class="btn btn--outline" id="btnNosotros">Conoce Más</button>
+                </div>
+                <div class="about__image">
+                    [AGREGAR FOTO - Equipo BYM]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL: TABS NOSOTROS -->
+    <div class="modal" id="modalNosotros">
+        <div class="modal__content">
+            <button class="modal__close" id="closeModal">&times;</button>
+            <div class="modal__tabs">
+                <div class="modal__tab-buttons">
+                    <button class="modal__tab-btn active" data-tab="historia">Historia</button>
+                    <button class="modal__tab-btn" data-tab="mision">Misión</button>
+                    <button class="modal__tab-btn" data-tab="vision">Visión</button>
+                    <button class="modal__tab-btn" data-tab="valores">Valores</button>
+                    <button class="modal__tab-btn" data-tab="politicas">Políticas</button>
+                    <button class="modal__tab-btn" data-tab="isos">Sistemas ISO</button>
+                </div>
+                <div class="modal__tab-content">
+                    <div class="modal__tab-pane active" id="historia">
+                        <h3>Historia</h3>
+                        <p>Constructora B&M nace en 2022 como resultado de la visión de profesionales con experiencia en gestión de proyectos civiles. Desde nuestros inicios, nos hemos dedicado a ejecutar obras que trasformen comunidades.</p>
+                        <p>En poco tiempo, hemos consolidado una trayectoria de confiabilidad, calidad y cumplimiento. Actualmente trabajamos principalmente con municipalidades, ejecutando proyectos de infraestructura urbana que mejoran la movilidad y calidad de vida.</p>
+                    </div>
+                    <div class="modal__tab-pane" id="mision">
+                        <h3>Misión</h3>
+                        <p>Ejecutar obras civiles de calidad superior, manteniendo los más altos estándares de seguridad, responsabilidad ambiental y cumplimiento regulatorio, garantizando la satisfacción de nuestros clientes y el bienestar de nuestro equipo.</p>
+                    </div>
+                    <div class="modal__tab-pane" id="vision">
+                        <h3>Visión</h3>
+                        <p>Ser la constructora referente en infraestructura urbana y vial en Lima, reconocida por nuestra excelencia técnica, compromiso con sostenibilidad y capacidad de transformar espacios públicos en activos comunitarios duraderos.</p>
+                    </div>
+                    <div class="modal__tab-pane" id="valores">
+                        <h3>Valores Corporativos</h3>
+                        <ul class="valores__list">
+                            <li><strong>Integridad:</strong> Honestidad y transparencia en todas nuestras operaciones</li>
+                            <li><strong>Calidad:</strong> Excelencia técnica en cada proyecto</li>
+                            <li><strong>Seguridad:</strong> Protección de nuestro equipo y comunidades</li>
+                            <li><strong>Sostenibilidad:</strong> Responsabilidad ambiental en todas las obras</li>
+                            <li><strong>Cumplimiento:</strong> 100% de plazos y regulaciones vigentes</li>
+                        </ul>
+                    </div>
+                    <div class="modal__tab-pane" id="politicas">
+                        <h3>Políticas de la Empresa</h3>
+                        <p><strong>Política Ambiental:</strong> Gestión responsable de residuos, reducción de emisiones, conservación de recursos naturales y cumplimiento regulatorio ambiental en todas las obras.</p>
+                        <p><strong>Política de Seguridad:</strong> EPP obligatorio, identificación de riesgos, capacitación continua, investigación de incidentes e inspecciones regulares. Objetivo: cero accidentes.</p>
+                        <p><strong>Política Antisoborno:</strong> Cero tolerancia a prácticas corruptivas, cumplimiento con ISO 37001.</p>
+                    </div>
+                    <div class="modal__tab-pane" id="isos">
+                        <h3>Sistema Integrado de Gestión</h3>
+                        <p>Contamos con certificaciones internacionales que garantizan nuestro compromiso con la calidad y responsabilidad:</p>
+                        <ul class="isos__list">
+                            <li>✓ <strong>ISO 9001:2015</strong> - Sistema de Gestión de Calidad</li>
+                            <li>✓ <strong>ISO 45001:2018</strong> - Seguridad y Salud en el Trabajo</li>
+                            <li>✓ <strong>ISO 37001:2016</strong> - Sistema Antisoborno</li>
+                            <li>✓ <strong>ISO 14001:2015</strong> - Gestión Ambiental</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICIOS -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <h2 class="section__title">Nuestros Servicios</h2>
+            <div class="services__grid">
+                <div class="service__card">
+                    <div class="service__icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3>Mejoramiento de Movilidad Urbana</h3>
+                    <p>Infraestructura peatonal y vial de calidad. Diseño integral de pistas, veredas, sardineles y espacios públicos seguros.</p>
+                </div>
+                <div class="service__card">
+                    <div class="service__icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Construcción de Pistas</h3>
+                    <p>Pavimentación flexible y rígida. Base compactada, acabados profesionales, señalización completa y durabilidad garantizada.</p>
+                </div>
+                <div class="service__card">
+                    <div class="service__icon">
+                        <i class="fas fa-person-walking"></i>
+                    </div>
+                    <h3>Veredas y Sardineles</h3>
+                    <p>Espacios seguros para peatones. Concreto pulido, sistemas de drenaje integrado, accesibilidad ADA y áreas verdes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="projects" id="proyectos">
+        <div class="container">
+            <h2 class="section__title">Proyectos Realizados</h2>
+            <div class="projects__grid" id="projectsGrid">
+                <!-- Se carga dinámicamente desde projects.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICACIONES -->
+    <section class="certifications" id="certificaciones">
+        <div class="container">
+            <h2 class="section__title">Certificaciones y Acreditaciones</h2>
+            <div class="certs__grid">
+                <div class="cert__item">
+                    <div class="cert__icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>ISO 9001:2015</h3>
+                    <p>Gestión de Calidad</p>
+                    <a href="docs/ISO_CALIDAD_9001_B_M.pdf" target="_blank" class="btn btn--small">Descargar PDF</a>
+                </div>
+                <div class="cert__item">
+                    <div class="cert__icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>ISO 45001:2018</h3>
+                    <p>Seguridad y Salud en el Trabajo</p>
+                    <a href="docs/ISO_SEGURIDAD_45001_B_M.pdf" target="_blank" class="btn btn--small">Descargar PDF</a>
+                </div>
+                <div class="cert__item">
+                    <div class="cert__icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>ISO 37001:2016</h3>
+                    <p>Sistema Antisoborno</p>
+                    <a href="docs/ISO_ANTISOBORNO_37001_B_M.pdf" target="_blank" class="btn btn--small">Descargar PDF</a>
+                </div>
+                <div class="cert__item">
+                    <div class="cert__icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>ISO 14001:2015</h3>
+                    <p>Gestión Ambiental</p>
+                    <a href="docs/ISO_AMBIENTAL_14005_B_M.pdf" target="_blank" class="btn btn--small">Descargar PDF</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO CONTACTO -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <h2 class="section__title">Contacto y Ubicación</h2>
+            <div class="contact__grid">
+                <div class="contact__form">
+                    <h3>Envíanos tu Consulta</h3>
+                    <form id="contactForm" class="form">
+                        <input type="text" name="nombre" placeholder="Tu Nombre" required class="form__input">
+                        <input type="email" name="email" placeholder="Tu Email" required class="form__input">
+                        <input type="tel" name="telefono" placeholder="Tu Teléfono" class="form__input">
+                        <select name="rubro" class="form__input">
+                            <option value="">Selecciona un Rubro de Interés</option>
+                            <option value="pistas">Construcción de Pistas</option>
+                            <option value="veredas">Veredas y Sardineles</option>
+                            <option value="movilidad">Movilidad Urbana Integral</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                        <textarea name="mensaje" placeholder="Tu Mensaje" rows="5" required class="form__input"></textarea>
+                        <button type="submit" class="btn btn--primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+                <div class="contact__info">
+                    <h3>Información de Contacto</h3>
+                    <div class="info__item">
+                        <strong>Teléfono:</strong>
+                        <a href="tel:902688168">902 688 168</a>
+                    </div>
+                    <div class="info__item">
+                        <strong>WhatsApp:</strong>
+                        <a href="https://wa.me/51902688168" target="_blank">+51 902 688 168</a>
+                    </div>
+                    <div class="info__item">
+                        <strong>Email:</strong>
+                        <a href="mailto:bymconstructorasac@gmail.com">bymconstructorasac@gmail.com</a>
+                    </div>
+                    <div class="info__item">
+                        <strong>Dirección:</strong>
+                        <p>Av. San Felipe 1006, A.H. 2 de Agosto (Cruce Av. Condorcanqui), Comas, Lima</p>
+                    </div>
+                    <div class="info__item">
+                        <strong>Horario:</strong>
+                        <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="map__container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.6821937856546!2d-77.0434278!3d-11.8993898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105d8c8c8c8c8c7%3A0xf5e8c8c8c8c8c8c8!2sAv%20San%20Felipe%201006%2C%20Comas%2015083!5e0!3m2!1ses!2spe!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h4>Sobre BYM</h4>
+                    <p>Constructora especializada en infraestructura vial y urbana con certificaciones ISO internacionales.</p>
+                </div>
+                <div class="footer__section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>Contáctanos</h4>
+                    <ul>
+                        <li><a href="tel:902688168">Tel: 902 688 168</a></li>
+                        <li><a href="https://wa.me/51902688168" target="_blank">WhatsApp</a></li>
+                        <li><a href="mailto:bymconstructorasac@gmail.com">Email</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>Síguenos</h4>
+                    <div class="social__links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 Constructora y Proyectos B&M S.A.C. | RUC: 20604736421 | Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/51902688168?text=Hola,%20solicito%20información%20sobre%20servicios%20de%20construcción" class="whatsapp__btn" target="_blank" aria-label="Chat WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script src="js/config.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
