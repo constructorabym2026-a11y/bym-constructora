@@ -190,7 +190,7 @@ function initForm() {
             }
 
             // Enviar con Formspree
-            const formspreeEndpoint = 'https://formspree.io/f/YOUR_FORM_ID'; // REEMPLAZA CON TU ID
+            const formspreeEndpoint = 'https://formspree.io/f/xojglnkq'; // REEMPLAZA CON TU ID
 
             try {
                 const response = await fetch(formspreeEndpoint, {
