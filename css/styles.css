@@ -610,50 +610,7 @@ body {
     font-weight: 600;
 }
 
-/* ============================================
-   PROYECTOS - BOTÓN VER MÁS
-   ============================================ */
 
-.projects__footer {
-    text-align: center;
-    margin-top: 60px;
-    padding: 20px 0;
-}
-
-.projects__footer button {
-    font-size: 16px;
-    padding: 15px 40px;
-}
-
-/* Ocultar proyectos 7-12 por defecto */
-.project__card[data-project-index="6"],
-.project__card[data-project-index="7"],
-.project__card[data-project-index="8"],
-.project__card[data-project-index="9"],
-.project__card[data-project-index="10"],
-.project__card[data-project-index="11"] {
-    display: none !important;
-}
-
-/* Mostrar cuando se expande */
-.projects__grid.expanded .project__card[data-project-index="6"],
-.projects__grid.expanded .project__card[data-project-index="7"],
-.projects__grid.expanded .project__card[data-project-index="8"],
-.projects__grid.expanded .project__card[data-project-index="9"],
-.projects__grid.expanded .project__card[data-project-index="10"],
-.projects__grid.expanded .project__card[data-project-index="11"] {
-    display: block !important;
-    animation: fadeIn 0.4s ease;
-}
-
-/* Animar el botón cuando cambia de estado */
-.projects__footer button {
-    transition: var(--transition);
-}
-
-.projects__footer button:hover {
-    transform: translateY(-3px);
-}
 
 /* ============================================
    CERTIFICACIONES
