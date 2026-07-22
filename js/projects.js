@@ -1,9 +1,12 @@
 /* ============================================
    BYM CONSTRUCTORA - PROYECTOS DINÁMICOS
-   Sistema de Ver Más / Ver Menos
+   Sistema de Ver Más / Ver Menos - VERSIÓN CORREGIDA
    ============================================ */
 
-document.addEventListener('DOMContentLoaded', renderProjects);
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🚀 DOMContentLoaded - Iniciando renderProjects');
+    renderProjects();
+});
 
 /**
  * FUNCIÓN PRINCIPAL: Renderizar proyectos
@@ -13,55 +16,80 @@ function renderProjects() {
     const projectsFooter = document.getElementById('projectsFooter');
     const btnVerMas = document.getElementById('btnVerMas');
 
+    console.log('📍 renderProjects iniciada');
+    console.log('✓ projectsGrid:', projectsGrid ? 'encontrado' : 'NO ENCONTRADO');
+    console.log('✓ projectsFooter:', projectsFooter ? 'encontrado' : 'NO ENCONTRADO');
+    console.log('✓ btnVerMas:', btnVerMas ? 'encontrado' : 'NO ENCONTRADO');
+
     if (!projectsGrid) {
-        console.warn('Contenedor de proyectos no encontrado');
+        console.error('❌ Contenedor de proyectos NO ENCONTRADO');
         return;
     }
 
     if (!CONFIG || !CONFIG.projects || CONFIG.projects.length === 0) {
         projectsGrid.innerHTML = '<p style="text-align: center; color: #666; grid-column: 1/-1;">No hay proyectos disponibles.</p>';
+        console.warn('⚠️ No hay proyectos en CONFIG');
         return;
     }
 
     // Limpiar
     projectsGrid.innerHTML = '';
+    console.log(`📊 Total de proyectos: ${CONFIG.projects.length}`);
 
     // Renderizar cada proyecto
     CONFIG.projects.forEach((project, index) => {
         const projectCard = createProjectCard(project, index);
         projectsGrid.appendChild(projectCard);
+        console.log(`✓ Proyecto ${index}: data-project-index="${index}" creado`);
     });
 
     // Mostrar botón "Ver Más" si hay más de 6 proyectos
     if (CONFIG.projects.length > 6) {
+        console.log('✅ Más de 6 proyectos - Mostrando botón "Ver Más"');
         projectsFooter.style.display = 'block';
         
         // Agregar evento al botón
         if (btnVerMas) {
             btnVerMas.addEventListener('click', toggleExpandProjects);
+            console.log('✅ Evento click agregado a btnVerMas');
+        } else {
+            console.error('❌ btnVerMas NO ENCONTRADO - No se pudo agregar evento');
         }
+    } else {
+        console.log('⚠️ 6 o menos proyectos - Botón NO visible');
+        projectsFooter.style.display = 'none';
     }
 
-    console.log(`✓ ${CONFIG.projects.length} proyectos cargados correctamente`);
+    console.log('✅ renderProjects completada');
 }
 
 /**
- * NUEVA FUNCIÓN: Expandir/Contraer proyectos
+ * FUNCIÓN: Expandir/Contraer proyectos
  */
 function toggleExpandProjects() {
     const projectsGrid = document.getElementById('projectsGrid');
     const btnVerMas = document.getElementById('btnVerMas');
+    
     const isExpanded = projectsGrid.classList.contains('expanded');
+    
+    console.log('🔄 toggleExpandProjects iniciada');
+    console.log('Estado actual expanded:', isExpanded);
 
     if (isExpanded) {
         // Contraer - volver a mostrar solo los primeros 6
+        console.log('📦 Acción: CONTRAER (remover clase expanded)');
         projectsGrid.classList.remove('expanded');
         btnVerMas.textContent = 'Ver Más Proyectos';
+        console.log('✅ Clase "expanded" removida');
     } else {
         // Expandir - mostrar todos
+        console.log('📂 Acción: EXPANDIR (agregar clase expanded)');
         projectsGrid.classList.add('expanded');
         btnVerMas.textContent = 'Ver Menos Proyectos';
+        console.log('✅ Clase "expanded" agregada');
     }
+    
+    console.log('Estado nuevo expanded:', projectsGrid.classList.contains('expanded'));
 }
 
 /**
@@ -101,7 +129,4 @@ function createProjectCard(project, index) {
     return card;
 }
 
-console.log('✅ Sistema de proyectos inicializado');
-// Mostrar estadísticas
-const stats = getProjectsStats();
-console.log('📊 Estadísticas de Proyectos:', stats);
+console.log('✅ Sistema de proyectos cargado (Ver consola F12 para debug)');
