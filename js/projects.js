@@ -1,30 +1,23 @@
 /* ============================================
    BYM CONSTRUCTORA - PROYECTOS DINÁMICOS
-   Sistema de Ver Más / Ver Menos - DEBUG TOTAL
+   Sistema de Ver Más / Ver Menos - SOLUCIÓN AGRESIVA
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🚀 DOMContentLoaded - Iniciando');
     
-    // Esperar a que el DOM esté completamente listo
-    setTimeout(() => {
-        console.log('⏱️ setTimeout 0ms ejecutado');
-        
-        // Inyectar CSS directamente
-        injectCSS();
-        
-        // Renderizar proyectos
-        renderProjects();
-    }, 0);
+    injectCSS();
+    renderProjects();
 });
 
 /**
- * Inyectar CSS directamente en el documento
+ * Inyectar CSS AGRESIVO
  */
 function injectCSS() {
     const style = document.createElement('style');
     style.id = 'projects-hide-show-css';
     style.textContent = `
+        /* OCULTAR PROYECTOS 7-12 */
         .project__card[data-project-index="6"],
         .project__card[data-project-index="7"],
         .project__card[data-project-index="8"],
@@ -32,8 +25,17 @@ function injectCSS() {
         .project__card[data-project-index="10"],
         .project__card[data-project-index="11"] {
             display: none !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            width: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            border: 0 !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
         }
 
+        /* MOSTRAR CUANDO SE EXPANDE */
         .projects__grid.expanded .project__card[data-project-index="6"],
         .projects__grid.expanded .project__card[data-project-index="7"],
         .projects__grid.expanded .project__card[data-project-index="8"],
@@ -41,15 +43,18 @@ function injectCSS() {
         .projects__grid.expanded .project__card[data-project-index="10"],
         .projects__grid.expanded .project__card[data-project-index="11"] {
             display: block !important;
+            visibility: visible !important;
+            height: auto !important;
+            width: auto !important;
+            margin: inherit !important;
+            padding: inherit !important;
+            opacity: 1 !important;
+            pointer-events: auto !important;
             animation: fadeIn 0.4s ease;
         }
     `;
     document.head.appendChild(style);
-    console.log('✅ CSS inyectado en <head>');
-    
-    // Verificar que se inyectó
-    const styleCheck = document.getElementById('projects-hide-show-css');
-    console.log('🔍 Verificación CSS inyectado:', styleCheck ? 'ENCONTRADO' : 'NO ENCONTRADO');
+    console.log('✅ CSS AGRESIVO inyectado');
 }
 
 /**
@@ -61,23 +66,14 @@ function renderProjects() {
     const btnVerMas = document.getElementById('btnVerMas');
 
     console.log('📍 renderProjects iniciada');
-    console.log('✓ projectsGrid:', projectsGrid ? 'encontrado' : 'NO ENCONTRADO');
-    console.log('✓ projectsFooter:', projectsFooter ? 'encontrado' : 'NO ENCONTRADO');
-    console.log('✓ btnVerMas:', btnVerMas ? 'encontrado' : 'NO ENCONTRADO');
 
-    if (!projectsGrid) {
-        console.error('❌ Contenedor de proyectos NO ENCONTRADO');
+    if (!projectsGrid || !CONFIG || !CONFIG.projects || CONFIG.projects.length === 0) {
+        console.error('❌ Error: elementos o CONFIG no encontrados');
         return;
     }
 
-    if (!CONFIG || !CONFIG.projects || CONFIG.projects.length === 0) {
-        console.warn('⚠️ No hay proyectos en CONFIG');
-        return;
-    }
-
-    // Limpiar
     projectsGrid.innerHTML = '';
-    console.log(`📊 Total de proyectos: ${CONFIG.projects.length}`);
+    console.log(`📊 Renderizando ${CONFIG.projects.length} proyectos`);
 
     // Renderizar cada proyecto
     CONFIG.projects.forEach((project, index) => {
@@ -85,32 +81,31 @@ function renderProjects() {
         projectsGrid.appendChild(projectCard);
     });
 
-    console.log('✅ Todos los proyectos rendidos');
+    console.log('✅ Proyectos rendidos');
 
-    // IMPORTANTE: Esperar a que se renderice antes de verificar
+    // Verificar después de renderizar
     setTimeout(() => {
-        console.log('\n🔍 VERIFICACIÓN FINAL DE VISIBILIDAD:');
-        for (let i = 0; i < CONFIG.projects.length; i++) {
+        console.log('\n🔍 VERIFICACIÓN DE VISIBILIDAD:');
+        console.log('Proyectos 0-5 (DEBEN estar visibles):');
+        for (let i = 0; i < 6; i++) {
             const card = document.querySelector(`[data-project-index="${i}"]`);
-            if (card) {
-                const computed = window.getComputedStyle(card);
-                const display = computed.display;
-                const visibility = display === 'none' ? '❌ OCULTO' : '✅ VISIBLE';
-                console.log(`  Proyecto ${i}: display="${display}" ${visibility}`);
-            } else {
-                console.log(`  Proyecto ${i}: ⚠️ NO ENCONTRADO EN DOM`);
-            }
+            const display = card ? window.getComputedStyle(card).display : 'NO EXISTE';
+            console.log(`  ${i}: ${display}`);
         }
-    }, 50);
+        console.log('Proyectos 6-11 (DEBEN estar OCULTOS):');
+        for (let i = 6; i < 12; i++) {
+            const card = document.querySelector(`[data-project-index="${i}"]`);
+            const display = card ? window.getComputedStyle(card).display : 'NO EXISTE';
+            console.log(`  ${i}: ${display}`);
+        }
+    }, 100);
 
-    // Mostrar botón "Ver Más" si hay más de 6 proyectos
+    // Mostrar botón
     if (CONFIG.projects.length > 6) {
-        console.log('\n✅ Mostrando botón "Ver Más"');
         projectsFooter.style.display = 'block';
-        
         if (btnVerMas) {
             btnVerMas.addEventListener('click', toggleExpandProjects);
-            console.log('✅ Evento click agregado a btnVerMas');
+            console.log('✅ Evento click agregado');
         }
     }
 
@@ -127,30 +122,33 @@ function toggleExpandProjects() {
     const isExpanded = projectsGrid.classList.contains('expanded');
     
     console.log('\n🔄 TOGGLE CLICK');
-    console.log('Estado ANTES:', isExpanded ? 'expanded' : 'contraído');
+    console.log('Estado actual:', isExpanded ? 'EXPANDIDO' : 'CONTRAÍDO');
 
     if (isExpanded) {
+        // Contraer
         projectsGrid.classList.remove('expanded');
         btnVerMas.textContent = 'Ver Más Proyectos';
-        console.log('Acción: REMOVER clase expanded');
+        console.log('✅ Acción: CONTRAER (removiendo clase expanded)');
     } else {
+        // Expandir
         projectsGrid.classList.add('expanded');
         btnVerMas.textContent = 'Ver Menos Proyectos';
-        console.log('Acción: AGREGAR clase expanded');
+        console.log('✅ Acción: EXPANDIR (agregando clase expanded)');
     }
     
+    // Verificar después
     setTimeout(() => {
-        console.log('Estado DESPUÉS:', projectsGrid.classList.contains('expanded') ? 'expanded' : 'contraído');
-        
+        console.log('Estado nuevo:', projectsGrid.classList.contains('expanded') ? 'EXPANDIDO' : 'CONTRAÍDO');
         console.log('\n🔍 Verificación después del toggle:');
         for (let i = 6; i < 12; i++) {
             const card = document.querySelector(`[data-project-index="${i}"]`);
             if (card) {
-                const computed = window.getComputedStyle(card);
-                console.log(`  Proyecto ${i}: display="${computed.display}"`);
+                const display = window.getComputedStyle(card).display;
+                console.log(`  Proyecto ${i}: display="${display}"`);
             }
         }
-    }, 50);
+        console.log('');
+    }, 100);
 }
 
 /**
@@ -190,4 +188,4 @@ function createProjectCard(project, index) {
     return card;
 }
 
-console.log('✅ projects.js cargado - Esperando DOMContentLoaded');
+console.log('✅ projects.js cargado - Sistema listo');
