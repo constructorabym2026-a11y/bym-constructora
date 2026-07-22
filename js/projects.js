@@ -5,8 +5,43 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🚀 DOMContentLoaded - Iniciando renderProjects');
+    
+    // Inyectar CSS directamente
+    injectCSS();
+    
     renderProjects();
 });
+
+/**
+ * Inyectar CSS directamente en el documento
+ */
+function injectCSS() {
+    const style = document.createElement('style');
+    style.textContent = `
+        /* Ocultar proyectos 7-12 por defecto */
+        .project__card[data-project-index="6"],
+        .project__card[data-project-index="7"],
+        .project__card[data-project-index="8"],
+        .project__card[data-project-index="9"],
+        .project__card[data-project-index="10"],
+        .project__card[data-project-index="11"] {
+            display: none !important;
+        }
+
+        /* Mostrar cuando se expande */
+        .projects__grid.expanded .project__card[data-project-index="6"],
+        .projects__grid.expanded .project__card[data-project-index="7"],
+        .projects__grid.expanded .project__card[data-project-index="8"],
+        .projects__grid.expanded .project__card[data-project-index="9"],
+        .projects__grid.expanded .project__card[data-project-index="10"],
+        .projects__grid.expanded .project__card[data-project-index="11"] {
+            display: block !important;
+            animation: fadeIn 0.4s ease;
+        }
+    `;
+    document.head.appendChild(style);
+    console.log('✅ CSS inyectado directamente en el documento');
+}
 
 /**
  * FUNCIÓN PRINCIPAL: Renderizar proyectos
@@ -43,6 +78,14 @@ function renderProjects() {
         console.log(`✓ Proyecto ${index}: data-project-index="${index}" creado`);
     });
 
+    // Verificar visibilidad de elementos
+    console.log('🔍 Verificando visibilidad de proyectos:');
+    for (let i = 0; i < CONFIG.projects.length; i++) {
+        const card = document.querySelector(`[data-project-index="${i}"]`);
+        const computed = window.getComputedStyle(card);
+        console.log(`  Proyecto ${i}: display="${computed.display}"`);
+    }
+
     // Mostrar botón "Ver Más" si hay más de 6 proyectos
     if (CONFIG.projects.length > 6) {
         console.log('✅ Más de 6 proyectos - Mostrando botón "Ver Más"');
@@ -76,13 +119,13 @@ function toggleExpandProjects() {
     console.log('Estado actual expanded:', isExpanded);
 
     if (isExpanded) {
-        // Contraer - volver a mostrar solo los primeros 6
+        // Contraer
         console.log('📦 Acción: CONTRAER (remover clase expanded)');
         projectsGrid.classList.remove('expanded');
         btnVerMas.textContent = 'Ver Más Proyectos';
         console.log('✅ Clase "expanded" removida');
     } else {
-        // Expandir - mostrar todos
+        // Expandir
         console.log('📂 Acción: EXPANDIR (agregar clase expanded)');
         projectsGrid.classList.add('expanded');
         btnVerMas.textContent = 'Ver Menos Proyectos';
@@ -90,6 +133,14 @@ function toggleExpandProjects() {
     }
     
     console.log('Estado nuevo expanded:', projectsGrid.classList.contains('expanded'));
+    
+    // Verificar nuevamente
+    console.log('🔍 Verificando visibilidad de proyectos:');
+    for (let i = 6; i < CONFIG.projects.length; i++) {
+        const card = document.querySelector(`[data-project-index="${i}"]`);
+        const computed = window.getComputedStyle(card);
+        console.log(`  Proyecto ${i}: display="${computed.display}"`);
+    }
 }
 
 /**
