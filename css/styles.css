@@ -632,7 +632,7 @@ body {
 .project__card[data-project-index="9"],
 .project__card[data-project-index="10"],
 .project__card[data-project-index="11"] {
-    display: none;
+    display: none !important;
 }
 
 /* Mostrar cuando se expande */
@@ -642,7 +642,7 @@ body {
 .projects__grid.expanded .project__card[data-project-index="9"],
 .projects__grid.expanded .project__card[data-project-index="10"],
 .projects__grid.expanded .project__card[data-project-index="11"] {
-    display: block;
+    display: block !important;
     animation: fadeIn 0.4s ease;
 }
 
