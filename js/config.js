@@ -72,7 +72,6 @@ const CONFIG = {
             ano: 2024,
             descripcion: 'Mejoramiento del servicio de movilidad urbana mediante infraestructura peatonal integral: pistas pavimentadas, veredas accesibles, sardineles y áreas verdes.',
             rubro: 'Habilitaciones Urbanas',
-            monto: 'S/ 101,807.08',
             image: 'images/pista_1.jpg'
         },
         {
@@ -82,7 +81,6 @@ const CONFIG = {
             ano: 2023,
             descripcion: 'Construcción de 2.5 km de pistas con pavimento flexible, base granular compactada y señalización vial completa. Proyecto completado dentro de plazo.',
             rubro: 'Infraestructura Vial',
-            monto: 'S/ 166,680.00',
             image: 'images/pista_2.jpg'
         },
         {
@@ -92,7 +90,6 @@ const CONFIG = {
             ano: 2023,
             descripcion: 'Rehabilitación y construcción de 1.2 km de veredas con accesibilidad ADA, sistemas de drenaje integrado y áreas verdes complementarias.',
             rubro: 'Infraestructura Peatonal',
-            monto: 'S/ 96,556.92',
             image: 'images/pista_3.jpg'
         },
         {
@@ -102,9 +99,26 @@ const CONFIG = {
             ano: 2022,
             descripcion: 'Proyecto integral de movilidad: pistas, veredas, drenaje pluvial, iluminación LED y espacios verdes. Transformación total de la zona urbana.',
             rubro: 'Proyectos Integrales',
-            monto: 'S/ 130,060.82',
             image: 'images/pista_5.jpg'
-        }
+        },
+           {
+           nombre: 'Construcción de Espacio de Circulación Peatonal y Muro de Contención',
+           cliente: 'Municipalidad Distrital de Los Olivos',
+           ubicacion: 'Calle Los Rosales y Los Girasoles, AA.HH. Mercurio Alto, Los Olivos, Lima',
+           ano: 2024,
+           descripcion: 'Construcción de espacios de circulación peatonal horizontal y vertical, con muro de contención en zona residencial. Mejora de accesibilidad y seguridad estructural en el asentamiento.',
+           rubro: 'Habilitaciones Urbanas',
+           image: 'images/vereda_3.jpg'
+    },
+    {
+           nombre: 'Mejoramiento de Espacios Públicos Urbanos - Parque Justicia',
+           cliente: 'Municipalidad Distrital de Los Olivos',
+           ubicacion: 'Parque N° 02 "Justicia", AA.HH. Los Jazmines del Naranjal, Los Olivos, Lima',
+           ano: 2026,
+           descripcion: 'Mejoramiento integral de espacios públicos urbanos incluyendo áreas verdes, mobiliario urbano, iluminación y accesibilidad. Revitalización del parque para la comunidad local.',
+           rubro: 'Proyectos Integrales',
+           image: 'images/parque_1.jpg'
+    }
     ],
 
     // SERVICIOS
