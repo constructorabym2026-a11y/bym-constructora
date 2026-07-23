@@ -66,7 +66,7 @@ const CONFIG = {
     // Estructura: {nombre, cliente, ubicacion, ano, descripcion, rubro, monto, image}
     // 
     projects: [   
-       // BYM // EN TOTAL : 5
+       // BYM // EN TOTAL : 9
           {
              nombre: "Creación del Servicio de Movilidad Urbana - San Antonio de Padua",
              cliente: "Municipalidad Distrital de Los Olivos",
@@ -112,6 +112,53 @@ const CONFIG = {
              rubro: "Proyectos Integrales",
              image: "images/parque_1.jpg"
            },
+            
+           {
+             nombre: "Mejoramiento de Movilidad Urbana - AA.HH Municipal Chillón",
+             cliente: "Municipalidad Distrital de Los Olivos",
+             ubicacion: "Calles internas del AA.HH Municipal Chillón, Los Olivos, Lima",
+             ano: 2026,
+             descripcion: "Mejoramiento de la movilidad urbana en calles internas del asentamiento humano Municipal Chillón, incluyendo pavimentación y señalización.",
+             rubro: "Infraestructura Vial",
+             image: "images/chillon.jpg"
+           },
+           {
+             nombre: "Renovación de Pavimento y Señales de Tráfico - Calle Los Jazmines",
+             cliente: "Municipalidad Distrital de Los Olivos",
+             ubicacion: "Calle Los Jazmines, desde Calle Aquia hasta Av. Universitaria, AA.HH Los Jazmines del Naranjal Sector 1, Los Olivos, Lima",
+             ano: 2026,
+             descripcion: "Renovación de pavimento y señales de tráfico en la Calle Los Jazmines, mejorando la seguridad vial y la movilidad en el sector.",
+             rubro: "Renovación de Infraestructura Vial",
+             image: "images/jazmines.jpg"
+           },
+           {
+             nombre: "Renovación de Calzada y Señales de Tráfico - Av. Central",
+             cliente: "Municipalidad Distrital de Los Olivos",
+             ubicacion: "Av. Central, desde Av. Canta Callao hasta Av. Alfredo Mendiola, Los Olivos, Lima",
+             ano: 2026,
+             descripcion: "Renovación integral de calzada y señales de tráfico en la Avenida Central, mejorando la movilidad y seguridad vial en una de las principales vías del distrito.",
+             rubro: "Renovación de Infraestructura Vial",
+             image: "images/central.jpg"
+           },
+           {
+             nombre: "Renovación de Pavimento, Vereda y Sardinel - Calle 17",
+             cliente: "Municipalidad Distrital de Los Olivos",
+             ubicacion: "Calle 17, A.H. Chillón y Urb. Prolima, Los Olivos, Lima",
+             ano: 2026,
+             descripcion: "Renovación de pavimento, vereda y sardinel, construcción de rampa y otros activos en la Calle 17, mejorando la accesibilidad y el espacio público.",
+             rubro: "Infraestructura Peatonal",
+             image: "images/calle17.jpg"
+           },
+           {
+             nombre: "Mejoramiento Integral de Movilidad Urbana - Av. Betancourt",
+             cliente: "Municipalidad Distrital de Los Olivos",
+             ubicacion: "Av. Betancourt, desde Av. Canta Callao hasta Av. Central, Los Olivos, Lima",
+             ano: 2026,
+             descripcion: "Mejoramiento integral de la movilidad urbana en la Avenida Betancourt, incluyendo infraestructura vial, peatonal y señalización para mejorar la conectividad.",
+             rubro: "Mejoramiento de Movilidad Urbana",
+             image: "images/betancourt.jpg"
+           },
+         
         // VALDIVIESO // EN TOTAL : 7
            {
              nombre: "Renovación de Pavimento y Señales de Tráfico - Sector Múltiple",
