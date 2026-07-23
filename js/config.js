@@ -64,7 +64,9 @@ const CONFIG = {
 
     // PROYECTOS - ARRAY EDITABLE PARA AGREGAR MÁS
     // Estructura: {nombre, cliente, ubicacion, ano, descripcion, rubro, monto, image}
+    // 
     projects: [   
+       // BYM // EN TOTAL : 5
           {
              nombre: "Creación del Servicio de Movilidad Urbana - San Antonio de Padua",
              cliente: "Municipalidad Distrital de Los Olivos",
@@ -110,6 +112,7 @@ const CONFIG = {
              rubro: "Proyectos Integrales",
              image: "images/parque_1.jpg"
            },
+        // VALDIVIESO // EN TOTAL : 7
            {
              nombre: "Renovación de Pavimento y Señales de Tráfico - Sector Múltiple",
              cliente: "Municipalidad Distrital de Los Olivos",
