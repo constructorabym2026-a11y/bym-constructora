@@ -631,6 +631,23 @@ body {
     font-size: 14px;
 }
 
+/* Link clickeable en certificados */
+.cert__link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: var(--transition);
+    display: block;
+}
+
+.cert__link:hover {
+    color: var(--accent);
+}
+
+.cert__link:hover h3 {
+    color: var(--accent);
+}
+
 /* ============================================
    CONTACTO
    ============================================ */
