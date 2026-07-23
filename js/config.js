@@ -120,7 +120,7 @@ const CONFIG = {
              ano: 2024,
              descripcion: "Renovación integral de pavimento y señales de tráfico en múltiples vías del distrito de Los Olivos, mejorando la seguridad vial y la movilidad.",
              rubro: "Renovación de Infraestructura Vial",
-             image: "images/pista_renovacion_1.jpg"
+             image: "images/pista_14.jpg"
            },
            {
              nombre: "Construcción de Espacio Peatonal y Muro de Contención - Mercurio Alto",
@@ -129,7 +129,7 @@ const CONFIG = {
              ano: 2024,
              descripcion: "Construcción de espacios de circulación peatonal horizontal y vertical, con muro de contención en el asentamiento humano Mercurio Alto, mejorando accesibilidad y seguridad estructural.",
              rubro: "Habilitaciones Urbanas",
-             image: "images/vereda_mercurio_1.jpg"
+             image: "images/muro_1.jpg"
            },
            {
              nombre: "Construcción de Pavimento, Vereda y Muro de Contención - Pasaje Venus",
@@ -147,7 +147,7 @@ const CONFIG = {
              ano: 2025,
              descripcion: "Proyecto integral de mejoramiento de movilidad urbana en la Avenida 17 de Noviembre, con infraestructura peatonal, vial y servicios complementarios para mejorar la conectividad.",
              rubro: "Mejoramiento de Movilidad Urbana",
-             image: "images/movilidad_av17_1.jpg"
+             image: "vereda_5.jpg"
            },
            {
              nombre: "Construcción de Infraestructura de Almacenamiento - Parque Perú Japón",
@@ -156,7 +156,7 @@ const CONFIG = {
              ano: 2025,
              descripcion: "Construcción de infraestructura de almacenamiento en el Parque Perú Japón, complementando los espacios públicos con equipamiento para la comunidad.",
              rubro: "Proyectos Integrales",
-             image: "images/parque_almacenamiento_1.jpg"
+             image: "veredas_2.jpg"
            },
            {
              nombre: "Renovación de Escalera de Acceso y Espacio Peatonal - San Antonio de Padua",
@@ -165,7 +165,7 @@ const CONFIG = {
              ano: 2025,
              descripcion: "Renovación de escalera de acceso y espacio de circulación peatonal horizontal y vertical en la Asociación de Vivienda San Antonio de Padua, mejorando la accesibilidad y seguridad.",
              rubro: "Habilitaciones Urbanas",
-             image: "images/escalera_1jpg"
+             image: "images/escalera_1.jpg"
            },
            {
              nombre: "Renovación de Pavimento y Vereda - Nueva Amistad (Etapa 1)",
