@@ -19,7 +19,7 @@ const CONFIG = {
         telefono: '902688168',
         whatsapp: '+51902688168',
         email: 'bymconstructorasac@gmail.com',
-        direccion: 'Av. San Felipe 1006, A.H. 2 de Agosto (Cruce Av. Condorcanqui), Comas, Lima',
+        direccion: '6237 San Ernesto, Lima, Provincia de Lima, San Ernesto, Los Olivos, Lima',
         horario: 'Lunes a Viernes: 9:00 AM - 6:00 PM'
     },
 
@@ -127,7 +127,7 @@ const CONFIG = {
             ano: 2024,
             descripcion: 'Renovación integral de pavimento y señales de tráfico en múltiples calles y jirones del distrito de Los Olivos. Mejora de la señalización vial y recarpeteo de pistas para mayor seguridad vehicular.',
             rubro: 'Renovación de Infraestructura Vial',
-            image: 'images/pista_14.jpg'
+            image: 'images/pista_renovacion_1.jpg'
         },
         {
             nombre: 'Construcción de Espacio Peatonal y Muro de Contención - Mercurio Alto',
@@ -136,7 +136,7 @@ const CONFIG = {
             ano: 2025,
             descripcion: 'Construcción de espacios de circulación peatonal horizontal y vertical, incluyendo muro de contención en AA.HH. Mercurio Alto. Proyecto que mejora la accesibilidad y seguridad estructural de la zona residencial.',
             rubro: 'Habilitaciones Urbanas',
-            image: 'images/vereda_4.jpg',
+            image: 'images/vereda_mercurio_1.jpg',
             cui: '2672765'
         },
         {
@@ -146,7 +146,7 @@ const CONFIG = {
             ano: 2026,
             descripcion: 'Proyecto integral de mejoramiento de movilidad urbana en la Avenida 17 de Noviembre. Infraestructura peatonal, vial y servicios complementarios para mejorar la conectividad en el Eje Zonal Independencia.',
             rubro: 'Mejoramiento de Movilidad Urbana',
-            image: 'images/equipo_B_M.jpg'
+            image: 'images/movilidad_av17_1.jpg'
         },
         {
             nombre: 'Construcción de Infraestructura de Almacenamiento - Parque Perú Japón',
@@ -155,7 +155,7 @@ const CONFIG = {
             ano: 2026,
             descripcion: 'Construcción de infraestructura de almacenamiento en el Parque Perú Japón. Proyecto que complementa los espacios públicos urbanos con soluciones de equipamiento para la comunidad.',
             rubro: 'Proyectos Integrales',
-            image: 'images/veredas_2.jpg',
+            image: 'images/parque_almacenamiento_1.jpg',
             cui: '2686001'
         },
         {
@@ -165,7 +165,7 @@ const CONFIG = {
             ano: 2026,
             descripcion: 'Renovación de escalera de acceso y espacio de circulación peatonal horizontal y vertical en la Asociación de Vivienda San Antonio de Padua. Mejora de accesibilidad y seguridad en áreas comunes.',
             rubro: 'Habilitaciones Urbanas',
-            image: 'images/escalera_1.jpg',
+            image: 'images/escalera_sanantonio_1.jpg',
             cui: '2654742'
         },
         {
@@ -175,7 +175,7 @@ const CONFIG = {
             ano: 2026,
             descripcion: 'Renovación de pavimento y vereda, construcción de obras exteriores en el AA.HH. Nueva Amistad - Etapa 1. Intervención integral que mejora la calidad del espacio público y la circulación en múltiples manzanas residenciales.',
             rubro: 'Infraestructura Peatonal',
-            image: 'images/veredas_1.jpg'
+            image: 'images/nueva_amistad_1.jpg'
         }
     ],
 
