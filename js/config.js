@@ -147,7 +147,7 @@ const CONFIG = {
              ano: 2025,
              descripcion: "Proyecto integral de mejoramiento de movilidad urbana en la Avenida 17 de Noviembre, con infraestructura peatonal, vial y servicios complementarios para mejorar la conectividad.",
              rubro: "Mejoramiento de Movilidad Urbana",
-             image: "vereda_5.jpg"
+             image: "images/vereda_5.jpg"
            },
            {
              nombre: "Construcción de Infraestructura de Almacenamiento - Parque Perú Japón",
@@ -156,7 +156,7 @@ const CONFIG = {
              ano: 2025,
              descripcion: "Construcción de infraestructura de almacenamiento en el Parque Perú Japón, complementando los espacios públicos con equipamiento para la comunidad.",
              rubro: "Proyectos Integrales",
-             image: "veredas_2.jpg"
+             image: "images/veredas_2.jpg"
            },
            {
              nombre: "Renovación de Escalera de Acceso y Espacio Peatonal - San Antonio de Padua",
