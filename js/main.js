@@ -295,3 +295,26 @@ document.querySelectorAll('.service__card, .project__card, .cert__item').forEach
 });
 
 console.log('BYM Constructora - Script cargado correctamente');
+
+/* ============================================
+   VER TODOS LOS PROYECTOS
+   ============================================ */
+
+document.addEventListener('DOMContentLoaded', function() {
+    const btnVerTodos = document.getElementById('btnVerTodos');
+    const projectsGrid = document.getElementById('projectsGrid');
+    
+    if (btnVerTodos) {
+        btnVerTodos.addEventListener('click', function() {
+            const isExpanded = projectsGrid.classList.contains('expanded');
+            
+            if (isExpanded) {
+                projectsGrid.classList.remove('expanded');
+                btnVerTodos.textContent = 'Ver Todos los Proyectos';
+            } else {
+                projectsGrid.classList.add('expanded');
+                btnVerTodos.textContent = 'Ver Menos';
+            }
+        });
+    }
+});
