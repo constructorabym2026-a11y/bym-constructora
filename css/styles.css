@@ -908,6 +908,39 @@ body {
         opacity: 1;
     }
 }
+/* ============================================
+   BOTÓN VER TODOS PROYECTOS
+   ============================================ */
+
+.projects__footer {
+    text-align: center;
+    margin-top: 60px;
+    padding: 20px 0;
+}
+
+.projects__footer button {
+    font-size: 16px;
+    padding: 15px 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.projects__footer button:hover {
+    transform: translateY(-3px);
+}
+
+/* Ocultar proyectos 7-12 por defecto */
+.project__card:nth-child(n+7) {
+    display: none;
+}
+
+/* Mostrar todos cuando se agrega clase expanded */
+.projects__grid.expanded .project__card {
+    display: block;
+}
+
+
+
 
 /* ============================================
    RESPONSIVE - TABLETS
