@@ -45,7 +45,7 @@ function createProjectCard(project, index) {
             ${imageHtml}
         </div>
         <div class="project__content">
-            <div class="project__title">${project.nombre}</div>
+            <div class="project__title" ${project.mostrarGaleria ? `onclick="abrirGaleria(${JSON.stringify(project).replace(/"/g, '&quot;')})"` : ''}>${project.nombre}</div>
             <div class="project__meta">
                 <strong>Cliente:</strong> ${project.cliente}<br>
                 <strong>Ubicación:</strong> ${project.ubicacion}<br>
