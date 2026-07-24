@@ -85,15 +85,7 @@ const CONFIG = {
              rubro: "Infraestructura Peatonal",
              image: "images/pista_1.jpg"
            },
-           {
-             nombre: "Mejoramiento de Movilidad Urbana - AA.HH Municipal Chillón",
-             cliente: "Municipalidad Distrital de Los Olivos",
-             ubicacion: "Calles internas del AA.HH Municipal Chillón, Los Olivos, Lima",
-             ano: 2024,
-             descripcion: "Mejoramiento de la movilidad urbana en calles internas del asentamiento humano, incluyendo pavimentación y señalización.",
-             rubro: "Infraestructura Vial",
-             image: "images/pista_3.jpg"
-           },
+
            {
              nombre: "Construcción de Veredas, Sardinel y Área Verde - Los Tulipanes y Los Jazmines",
              cliente: "Municipalidad Distrital de Los Olivos",
@@ -120,7 +112,7 @@ const CONFIG = {
              ano: 2026,
              descripcion: "Mejoramiento de la movilidad urbana en calles internas del asentamiento humano Municipal Chillón, incluyendo pavimentación y señalización.",
              rubro: "Infraestructura Vial",
-             image: "images/chillon.jpg"
+             image: "images/chillon_1.jpg"
            },
            {
              nombre: "Renovación de Pavimento y Señales de Tráfico - Calle Los Jazmines",
@@ -147,7 +139,7 @@ const CONFIG = {
              ano: 2026,
              descripcion: "Renovación de pavimento, vereda y sardinel, construcción de rampa y otros activos en la Calle 17, mejorando la accesibilidad y el espacio público.",
              rubro: "Infraestructura Peatonal",
-             image: "images/calle17.jpg"
+             image: "images/calle17_1.jpg"
            },
            {
              nombre: "Mejoramiento Integral de Movilidad Urbana - Av. Betancourt",
