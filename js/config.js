@@ -205,6 +205,13 @@ const CONFIG = {
              descripcion: "Renovación de escalera de acceso y espacio de circulación peatonal horizontal y vertical en la Asociación de Vivienda San Antonio de Padua, mejorando la accesibilidad y seguridad.",
              rubro: "Habilitaciones Urbanas",
              image: "images/escalera_1.jpg"
+             mostrarGaleria: true,
+             galeria: [
+                 'images/proyecto1_foto1.jpg',
+                 'images/proyecto1_foto2.jpg',
+                 'images/proyecto1_foto3.jpg'
+             ]
+              
            },
            {
              nombre: "Renovación de Pavimento y Vereda - Nueva Amistad (Etapa 1)",
@@ -215,6 +222,8 @@ const CONFIG = {
              rubro: "Infraestructura Peatonal",
              image: "images/vereda_4.jpg"
            }
+            mostrarGaleria: false,
+            galeria: []
     ],
 
     // SERVICIOS
