@@ -10,24 +10,24 @@ const CONFIG = {
         ruc: '20604736421',
         eslogan: 'Proyectos sólidos, resultados reales',
         fundacion: 2022,
-        gerente: 'Edwin Gonzalo Terrones Ramos',
+        gerente: '.',
         grupo: 'Grupo Zaragoza'
     },
 
     // CONTACTO
     contacto: {
-        telefono: '902688168',
-        whatsapp: '+51902688168',
+        telefono: '.',
+        whatsapp: '.',
         email: 'bymconstructorasac@gmail.com',
-        direccion: '6237 San Ernesto, Lima, Provincia de Lima, San Ernesto, Los Olivos, Lima',
+        direccion: '.',
         horario: 'Lunes a Viernes: 9:00 AM - 6:00 PM'
     },
 
     // GPS UBICACIÓN
     ubicacion: {
-        latitud: -11.8993898,
-        longitud: -77.0434278,
-        googleMapsUrl: 'https://maps.app.goo.gl/WXNKPWQeapTRAuaJ8'
+        latitud: -11.,
+        longitud: -77.,
+        googleMapsUrl: '.'
     },
 
     // CERTIFICACIONES ISO
