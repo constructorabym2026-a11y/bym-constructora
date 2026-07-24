@@ -294,6 +294,81 @@ document.querySelectorAll('.service__card, .project__card, .cert__item').forEach
     observer.observe(el);
 });
 
+/* ============================================
+   GALERÍA MODAL DE PROYECTOS
+   ============================================ */
+
+let galeriaActual = [];
+let fotoActualIndex = 0;
+let proyectoActual = {};
+
+function abrirGaleria(proyecto) {
+    if (!proyecto.mostrarGaleria || !proyecto.galeria || proyecto.galeria.length === 0) {
+        return;
+    }
+    
+    galeriaActual = proyecto.galeria;
+    fotoActualIndex = 0;
+    proyectoActual = proyecto;
+    
+    const modal = document.getElementById('modalGaleria');
+    modal.style.display = 'flex';
+    
+    mostrarFoto();
+    document.body.style.overflow = 'hidden';
+}
+
+function cerrarGaleria() {
+    const modal = document.getElementById('modalGaleria');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+function mostrarFoto() {
+    const img = document.getElementById('galeriaImage');
+    const contador = document.getElementById('fotoActual');
+    const total = document.getElementById('totalFotos');
+    const titulo = document.getElementById('galeríaTítulo');
+    
+    img.src = galeriaActual[fotoActualIndex];
+    contador.textContent = fotoActualIndex + 1;
+    total.textContent = galeriaActual.length;
+    titulo.textContent = proyectoActual.nombre;
+}
+
+function fotoAnterior() {
+    fotoActualIndex = (fotoActualIndex - 1 + galeriaActual.length) % galeriaActual.length;
+    mostrarFoto();
+}
+
+function fotoSiguiente() {
+    fotoActualIndex = (fotoActualIndex + 1) % galeriaActual.length;
+    mostrarFoto();
+}
+
+// Event listeners
+document.addEventListener('DOMContentLoaded', function() {
+    const cerrar = document.getElementById('cerrarGaleria');
+    const prev = document.getElementById('galeríaPrev');
+    const next = document.getElementById('galería Next');
+    const overlay = document.querySelector('.modal-galeria__overlay');
+    
+    if (cerrar) cerrar.addEventListener('click', cerrarGaleria);
+    if (prev) prev.addEventListener('click', fotoAnterior);
+    if (next) next.addEventListener('click', fotoSiguiente);
+    if (overlay) overlay.addEventListener('click', cerrarGaleria);
+    
+    // Teclas de teclado
+    document.addEventListener('keydown', function(e) {
+        if (document.getElementById('modalGaleria').style.display === 'none') return;
+        if (e.key === 'ArrowLeft') fotoAnterior();
+        if (e.key === 'ArrowRight') fotoSiguiente();
+        if (e.key === 'Escape') cerrarGaleria();
+    });
+});
+
+
+
 console.log('BYM Constructora - Script cargado correctamente');
 
 /* ============================================
