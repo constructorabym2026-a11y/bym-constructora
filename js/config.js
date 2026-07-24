@@ -74,7 +74,7 @@ const CONFIG = {
              ano: 2024,
              descripcion: "Creación del servicio de movilidad urbana mediante infraestructura vial y peatonal en el pasaje de la Asociación de Vivienda San Antonio de Padua.",
              rubro: "Infraestructura Vial",
-             image: "images/pista_2.jpg"
+             image: "images/padua_1.jpg"
            },
            {
              nombre: "Mejoramiento de Movilidad Urbana - Jirón Chasquitambo",
