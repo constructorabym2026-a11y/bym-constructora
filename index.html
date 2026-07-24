@@ -100,7 +100,9 @@
                     <button class="btn btn--outline" id="btnNosotros">Conoce Más</button>
                 </div>
                 <div class="about__image">
-                    <img src="images/equipo_B_M_3.jpg" alt="Equipo Constructora B&M" style="width: 100%; border-radius: 8px;">
+                    <div class="about__image">
+                        <img src="images/equipo_B_M_3.jpg" alt="Equipo Constructora B&M" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="abrirGaleriaImagen('equipo_B_M_3.jpg', 'Nuestro Equipo')">
+</div>
                 </div>
             </div>
         </div>
@@ -328,7 +330,25 @@
             </div>
         </div>
     </footer>
-
+<!-- MODAL GALERÍA DE PROYECTOS -->
+<div class="modal-galeria" id="modalGaleria" style="display: none;">
+    <div class="modal-galeria__overlay"></div>
+    <div class="modal-galeria__container">
+        <button class="modal-galeria__close" id="cerrarGaleria">×</button>
+        
+        <div class="modal-galeria__content">
+            <img class="modal-galeria__image" id="galeriaImage" src="" alt="Proyecto">
+        </div>
+        
+        <div class="modal-galeria__nav">
+            <button class="modal-galeria__prev" id="galeríaPrev">❮</button>
+            <span class="modal-galeria__counter"><span id="fotoActual">1</span> / <span id="totalFotos">1</span></span>
+            <button class="modal-galeria__next" id="galeriaNext">❯</button>
+        </div>
+        
+        <div class="modal-galeria__title" id="galeríaTítulo"></div>
+    </div>
+</div>
     <!-- SCRIPTS -->
     <script src="js/config.js"></script>
     <script src="js/projects.js"></script>
