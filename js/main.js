@@ -302,7 +302,9 @@ let galeriaActual = [];
 let fotoActualIndex = 0;
 let proyectoActual = {};
 
-function abrirGaleria(proyecto) {
+window.abrirGaleria = function(element) {
+    let proyecto = JSON.parse(element.getAttribute('data-proyecto'));
+    
     if (!proyecto.mostrarGaleria || !proyecto.galeria || proyecto.galeria.length === 0) {
         return;
     }
@@ -316,7 +318,7 @@ function abrirGaleria(proyecto) {
     
     mostrarFoto();
     document.body.style.overflow = 'hidden';
-}
+};
 
 function cerrarGaleria() {
     const modal = document.getElementById('modalGaleria');
@@ -346,7 +348,6 @@ function fotoSiguiente() {
     mostrarFoto();
 }
 
-// Event listeners
 document.addEventListener('DOMContentLoaded', function() {
     const cerrar = document.getElementById('cerrarGaleria');
     const prev = document.getElementById('galeríaPrev');
@@ -358,9 +359,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (next) next.addEventListener('click', fotoSiguiente);
     if (overlay) overlay.addEventListener('click', cerrarGaleria);
     
-    // Teclas de teclado
     document.addEventListener('keydown', function(e) {
-        if (document.getElementById('modalGaleria').style.display === 'none') return;
+        if (!document.getElementById('modalGaleria') || document.getElementById('modalGaleria').style.display === 'none') return;
         if (e.key === 'ArrowLeft') fotoAnterior();
         if (e.key === 'ArrowRight') fotoSiguiente();
         if (e.key === 'Escape') cerrarGaleria();
