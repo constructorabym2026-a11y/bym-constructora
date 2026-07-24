@@ -8,9 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initModal();
     initForm();
-    loadProjects();
 });
-
 /* ============================================
    SLIDER HERO
    ============================================ */
@@ -293,6 +291,106 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.service__card, .project__card, .cert__item').forEach(el => {
     observer.observe(el);
 });
+
+/* ============================================
+   GALERÍA MODAL DE PROYECTOS
+   ============================================ */
+
+let galeriaActual = [];
+let fotoActualIndex = 0;
+let proyectoActualNombre = '';
+
+function abrirGaleria(idProyecto, nombreProyecto) {
+    if (!CONFIG || !CONFIG.projects) {
+        return;
+    }
+    
+    // Buscar proyecto por ID
+    const proyecto = CONFIG.projects.find(p => p.id === idProyecto);
+    
+    if (!proyecto || !proyecto.galeria || proyecto.galeria.length === 0) {
+        return;
+    }
+    
+    galeriaActual = proyecto.galeria;
+    fotoActualIndex = 0;
+    proyectoActualNombre = nombreProyecto;
+    
+    const modal = document.getElementById('modalGaleria');
+    if (modal) {
+        modal.style.display = 'flex';
+        mostrarFoto();
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function cerrarGaleria() {
+    const modal = document.getElementById('modalGaleria');
+    if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+}
+
+function mostrarFoto() {
+    const img = document.getElementById('galeriaImage');
+    const contador = document.getElementById('fotoActual');
+    const total = document.getElementById('totalFotos');
+    const titulo = document.getElementById('galeríaTítulo');
+    
+    if (!img || !contador || !total) return;
+    
+    const rutaFoto = 'images/' + galeriaActual[fotoActualIndex] ;
+    img.src = rutaFoto;
+    contador.textContent = fotoActualIndex + 1;
+    total.textContent = galeriaActual.length;
+    titulo.textContent = proyectoActualNombre;
+}
+
+function fotoAnterior() {
+    fotoActualIndex = (fotoActualIndex - 1 + galeriaActual.length) % galeriaActual.length;
+    mostrarFoto();
+}
+
+function fotoSiguiente() {
+    fotoActualIndex = (fotoActualIndex + 1) % galeriaActual.length;
+    mostrarFoto();
+}
+function abrirGaleriaImagen(nombreImagen, tituloImagen) {
+    galeriaActual = [nombreImagen];
+    fotoActualIndex = 0;
+    proyectoActualNombre = tituloImagen;
+    
+    const modal = document.getElementById('modalGaleria');
+    if (modal) {
+        modal.style.display = 'flex';
+        mostrarFoto();
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cerrar = document.getElementById('cerrarGaleria');
+    const prev = document.getElementById('galeríaPrev');
+    const next = document.getElementById('galeriaNext');
+    const overlay = document.querySelector('.modal-galeria__overlay');
+    
+    if (cerrar) cerrar.addEventListener('click', cerrarGaleria);
+    if (prev) prev.addEventListener('click', fotoAnterior);
+    if (next) next.addEventListener('click', fotoSiguiente);
+    if (overlay) overlay.addEventListener('click', cerrarGaleria);
+    
+    document.addEventListener('keydown', function(e) {
+        const modal = document.getElementById('modalGaleria');
+        if (!modal || modal.style.display === 'none') return;
+        if (e.key === 'ArrowLeft') fotoAnterior();
+        if (e.key === 'ArrowRight') fotoSiguiente();
+        if (e.key === 'Escape') cerrarGaleria();
+    });
+});
+
+
 
 console.log('BYM Constructora - Script cargado correctamente');
 
