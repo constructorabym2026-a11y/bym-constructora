@@ -221,7 +221,7 @@ const CONFIG = {
              ano: 2025,
              descripcion: "Renovación de pavimento y vereda, construcción de obras exteriores en el AA.HH Nueva Amistad, primera etapa, mejorando el espacio público en múltiples manzanas residenciales.",
              rubro: "Infraestructura Peatonal",
-             image: "images/vereda_5.jpg"
+             image: "images/vereda_4.jpg"
            }
     ],
 
