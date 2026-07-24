@@ -221,10 +221,11 @@ const CONFIG = {
              descripcion: "Renovación de pavimento y vereda, construcción de obras exteriores en el AA.HH Nueva Amistad, primera etapa, mejorando el espacio público en múltiples manzanas residenciales.",
              rubro: "Infraestructura Peatonal",
              image: "images/vereda_4.jpg"
+             mostrarGaleria: false,
+             galeria: []
            }
-            mostrarGaleria: false,
-            galeria: []
-    ],
+
+             ],
 
     // SERVICIOS
     servicios: [
