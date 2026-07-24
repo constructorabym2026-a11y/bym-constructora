@@ -74,8 +74,10 @@ const CONFIG = {
              ano: 2024,
              descripcion: "Creación del servicio de movilidad urbana mediante infraestructura vial y peatonal en el pasaje de la Asociación de Vivienda San Antonio de Padua.",
              rubro: "Infraestructura Vial",
-             image: "images/pista_2.jpg"
+             image: "images/pista_2.jpg",
+             galeria: ['padua_2', 'padua_4', 'padua_5']
            },
+
            {
              nombre: "Mejoramiento de Movilidad Urbana - Jirón Chasquitambo",
              cliente: "Municipalidad Distrital de Los Olivos",
@@ -84,6 +86,7 @@ const CONFIG = {
              descripcion: "Mejoramiento del servicio de movilidad urbana mediante infraestructura peatonal integral: pistas, veredas accesibles, sardineles y áreas verdes.",
              rubro: "Infraestructura Peatonal",
              image: "images/pista_1.jpg"
+              
            },
 
            {
