@@ -7,11 +7,11 @@ const CONFIG = {
     // DATOS DE EMPRESA
     empresa: {
         nombre: 'Constructora y Proyectos B&M S.A.C.',
-        ruc: '20604736421',
+        ruc: '.',
         eslogan: 'Proyectos sólidos, resultados reales',
         fundacion: 2022,
         gerente: '.',
-        grupo: 'Grupo Zaragoza'
+        grupo: '.'
     },
 
     // CONTACTO
@@ -25,8 +25,8 @@ const CONFIG = {
 
     // GPS UBICACIÓN
     ubicacion: {
-        latitud: -11.,
-        longitud: -77.,
+        latitud: -1,
+        longitud: -2,
         googleMapsUrl: '.'
     },
 
@@ -65,160 +65,194 @@ const CONFIG = {
     // PROYECTOS - ARRAY EDITABLE PARA AGREGAR MÁS
     // Estructura: {nombre, cliente, ubicacion, ano, descripcion, rubro, monto, image}
     // 
-    projects: [   
+projects: [   
        // BYM // EN TOTAL : 9
           {
+             id: 'proy_01_padua_movilidad',
              nombre: "Creación del Servicio de Movilidad Urbana - San Antonio de Padua",
              cliente: "Municipalidad Distrital de Los Olivos",
              ubicacion: "Pasaje de la Asoc. de Vivienda San Antonio de Padua, Los Olivos, Lima",
              ano: 2024,
              descripcion: "Creación del servicio de movilidad urbana mediante infraestructura vial y peatonal en el pasaje de la Asociación de Vivienda San Antonio de Padua.",
              rubro: "Infraestructura Vial",
-             image: "images/padua_1.jpg"
+             image: "images/padua_1.jpg",
+             galeria: ['padua_1.jpg', 'padua_2.jpg', 'padua_3.jpg','padua_4.jpg','padua_5.jpg']
            },
+
            {
+             id: 'proy_02_chasquitambo',
              nombre: "Mejoramiento de Movilidad Urbana - Jirón Chasquitambo",
              cliente: "Municipalidad Distrital de Los Olivos",
              ubicacion: "Jirón Chasquitambo, cuadra 5 y 6, Los Olivos, Lima",
              ano: 2024,
              descripcion: "Mejoramiento del servicio de movilidad urbana mediante infraestructura peatonal integral: pistas, veredas accesibles, sardineles y áreas verdes.",
              rubro: "Infraestructura Peatonal",
-             image: "images/pista_1.jpg"
+             image: "images/pista_1.jpg",
+             galeria: ['pista_1.jpg']
+              
            },
 
            {
+             id: 'proy_03_tulipanes_jazmines',
              nombre: "Construcción de Veredas, Sardinel y Área Verde - Los Tulipanes y Los Jazmines",
              cliente: "Municipalidad Distrital de Los Olivos",
              ubicacion: "Calle Los Tulipanes y Calle Los Jazmines, AA.HH Los Olivos de Pro, Los Olivos, Lima",
              ano: 2024,
              descripcion: "Construcción de veredas, sardineles y áreas verdes en calles Los Tulipanes y Los Jazmines, mejorando la accesibilidad y el entorno urbano.",
              rubro: "Infraestructura Peatonal",
-             image: "images/vereda_3.jpg"
+             image: "images/tulipanes_1.jpg",
+             galeria: ['tulipanes_1.jpg','tulipanes_2.jpg', 'tulipanes_3.jpg', 'tulipanes_4.jpg','tulipanes_5.jpg']
            },
            {
+             id: 'proy_04_parque_justicia',
              nombre: "Mejoramiento de Espacios Públicos Urbanos - Parque Justicia",
              cliente: "Municipalidad Distrital de Los Olivos",
              ubicacion: "Parque N° 02 'Justicia', AA.HH Los Jazmines del Naranjal, Los Olivos, Lima",
              ano: 2026,
              descripcion: "Mejoramiento integral de espacios públicos urbanos incluyendo áreas verdes, mobiliario urbano, iluminación y accesibilidad en el Parque Justicia.",
              rubro: "Proyectos Integrales",
-             image: "images/parque_1.jpg"
+             image: "images/parque_1.jpg",
+             galeria:['parque_1.jpg']
            },
             
            {
+             id: 'proy_05_chillon',
              nombre: "Mejoramiento de Movilidad Urbana - AA.HH Municipal Chillón",
              cliente: "Municipalidad Distrital de Los Olivos",
              ubicacion: "Calles internas del AA.HH Municipal Chillón, Los Olivos, Lima",
              ano: 2026,
              descripcion: "Mejoramiento de la movilidad urbana en calles internas del asentamiento humano Municipal Chillón, incluyendo pavimentación y señalización.",
              rubro: "Infraestructura Vial",
-             image: "images/chillon_1.jpg"
+             image: "images/en_ejecucion.jpg"
+             //galeria:(NO TE OLVIDES DE LA COMA) ['chillon_1.jpg']
            },
            {
+             id: 'proy_06_calle_jazmines',
              nombre: "Renovación de Pavimento y Señales de Tráfico - Calle Los Jazmines",
              cliente: "Municipalidad Distrital de Los Olivos",
              ubicacion: "Calle Los Jazmines, desde Calle Aquia hasta Av. Universitaria, AA.HH Los Jazmines del Naranjal Sector 1, Los Olivos, Lima",
              ano: 2026,
              descripcion: "Renovación de pavimento y señales de tráfico en la Calle Los Jazmines, mejorando la seguridad vial y la movilidad en el sector.",
              rubro: "Renovación de Infraestructura Vial",
-             image: "images/jazmines.jpg"
+             image: "images/en_ejecucion.jpg"
+              //(NO TE OLVIDES DE LA COMA) galeria: ['chillon_1.jpg']
            },
            {
+             id: 'proy_07_av_central',
              nombre: "Renovación de Calzada y Señales de Tráfico - Av. Central",
              cliente: "Municipalidad Distrital de Los Olivos",
              ubicacion: "Av. Central, desde Av. Canta Callao hasta Av. Alfredo Mendiola, Los Olivos, Lima",
              ano: 2026,
              descripcion: "Renovación integral de calzada y señales de tráfico en la Avenida Central, mejorando la movilidad y seguridad vial en una de las principales vías del distrito.",
              rubro: "Renovación de Infraestructura Vial",
-             image: "images/central.jpg"
+             image: "images/en_ejecucion.jpg"
+               //(NO TE OLVIDES DE LA COMA) galeria: ['chillon_1.jpg']
            },
            {
+             id: 'proy_08_calle_17',
              nombre: "Renovación de Pavimento, Vereda y Sardinel - Calle 17",
              cliente: "Municipalidad Distrital de Los Olivos",
              ubicacion: "Calle 17, A.H. Chillón y Urb. Prolima, Los Olivos, Lima",
              ano: 2026,
              descripcion: "Renovación de pavimento, vereda y sardinel, construcción de rampa y otros activos en la Calle 17, mejorando la accesibilidad y el espacio público.",
              rubro: "Infraestructura Peatonal",
-             image: "images/calle17_1.jpg"
+             image: "images/calle17_1.jpg",
+             galeria:['calle17_1.jpg']
            },
            {
+             id: 'proy_09_betancourt',
              nombre: "Mejoramiento Integral de Movilidad Urbana - Av. Betancourt",
              cliente: "Municipalidad Distrital de Los Olivos",
              ubicacion: "Av. Betancourt, desde Av. Canta Callao hasta Av. Central, Los Olivos, Lima",
              ano: 2026,
              descripcion: "Mejoramiento integral de la movilidad urbana en la Avenida Betancourt, incluyendo infraestructura vial, peatonal y señalización para mejorar la conectividad.",
              rubro: "Mejoramiento de Movilidad Urbana",
-             image: "images/betancourt.jpg"
+             image: "images/en_ejecucion.jpg"
+             //(NO TE OLVIDES DE LA COMA)galeria: ['chillon_1.jpg']
            },
          
         // VALDIVIESO // EN TOTAL : 7
            {
+             id: 'proy_10_sector_multiple',
              nombre: "Renovación de Pavimento y Señales de Tráfico - Sector Múltiple",
              cliente: "Municipalidad Distrital de Los Olivos",
              ubicacion: "Calles 54,55,58, jirones La Amistad, Veracidad, Prolongación Aquia, Los Olivos, Los Claveles, Malvas, José Santos Chocano, Amarantos, El Amargón, Santa Cruz de Pachacutec, Manuel Gonzales Prada, Venus, Carlos Augusto Salaverry, Los Olivos, Lima",
              ano: 2024,
              descripcion: "Renovación integral de pavimento y señales de tráfico en múltiples vías del distrito de Los Olivos, mejorando la seguridad vial y la movilidad.",
              rubro: "Renovación de Infraestructura Vial",
-             image: "images/pista_14.jpg"
+             image: "images/pista_14.jpg",
+             galeria:['pista_14.jpg']
            },
            {
+             id: 'proy_11_mercurio_alto',
              nombre: "Construcción de Espacio Peatonal y Muro de Contención - Mercurio Alto",
              cliente: "Municipalidad Distrital de Los Olivos",
              ubicacion: "Calle Los Rosales y Los Girasoles, AA.HH Mercurio Alto, Los Olivos, Lima",
              ano: 2024,
              descripcion: "Construcción de espacios de circulación peatonal horizontal y vertical, con muro de contención en el asentamiento humano Mercurio Alto, mejorando accesibilidad y seguridad estructural.",
              rubro: "Habilitaciones Urbanas",
-             image: "images/muro_1.jpg"
+             image: "images/muro_1.jpg",
+             galeria:['muro_1.jpg']
            },
            {
+             id: 'proy_12_pasaje_venus',
              nombre: "Construcción de Pavimento, Vereda y Muro de Contención - Pasaje Venus",
              cliente: "Municipalidad Distrital de Los Olivos",
              ubicacion: "Pasaje A, B y C, AA.HH Moradores del Pasaje Venus, Centro Poblado Las Palmeras, Los Olivos, Lima",
              ano: 2025,
              descripcion: "Construcción de pavimento, vereda, espacio de circulación peatonal y muro de contención, además de otros activos, en el pasaje Venus, primera etapa.",
              rubro: "Habilitaciones Urbanas",
-             image: "images/pista_3.jpg"
+             image: "images/pista_3.jpg",
+             galeria: ['pista_3.jpg']
            },
            {
+             id: 'proy_13_av17_noviembre',
              nombre: "Mejoramiento de Movilidad Urbana - Avenida 17 de Noviembre",
              cliente: "Municipalidad Distrital de Independencia",
              ubicacion: "Avenida 17 de Noviembre, Eje Zonal Independencia, Independencia, Lima",
              ano: 2025,
              descripcion: "Proyecto integral de mejoramiento de movilidad urbana en la Avenida 17 de Noviembre, con infraestructura peatonal, vial y servicios complementarios para mejorar la conectividad.",
              rubro: "Mejoramiento de Movilidad Urbana",
-             image: "images/vereda_5.jpg"
+             image: "images/vereda_5.jpg",
+             galeria: ['vereda_5.jpg']
            },
            {
+             id: 'proy_14_parque_peru_japon',
              nombre: "Construcción de Infraestructura de Almacenamiento - Parque Perú Japón",
              cliente: "Municipalidad Distrital de Los Olivos",
              ubicacion: "Parque Perú Japón, Urb. Parque Naranjal I Etapa, Los Olivos, Lima",
              ano: 2025,
              descripcion: "Construcción de infraestructura de almacenamiento en el Parque Perú Japón, complementando los espacios públicos con equipamiento para la comunidad.",
              rubro: "Proyectos Integrales",
-             image: "images/veredas_2.jpg"
+             image: "images/veredas_2.jpg",
+             galeria:['veredas_2.jpg']
            },
            {
+             id: 'proy_15_escalera_padua',
              nombre: "Renovación de Escalera de Acceso y Espacio Peatonal - San Antonio de Padua",
              cliente: "Municipalidad Distrital de Los Olivos",
              ubicacion: "Pasaje A, D y H, Asoc. de Vivienda San Antonio de Padua, Los Olivos, Lima",
              ano: 2025,
              descripcion: "Renovación de escalera de acceso y espacio de circulación peatonal horizontal y vertical en la Asociación de Vivienda San Antonio de Padua, mejorando la accesibilidad y seguridad.",
              rubro: "Habilitaciones Urbanas",
-             image: "images/escalera_1.jpg"
-              
+             image: "images/escalera_1.jpg",
+             galeria: ['escalera_1.jpg']  
            },
            {
+             id: 'proy_16_nueva_amistad',
              nombre: "Renovación de Pavimento y Vereda - Nueva Amistad (Etapa 1)",
              cliente: "Municipalidad Distrital de Los Olivos",
              ubicacion: "Manzanas A, B, B1, C y D, AA.HH Nueva Amistad, Los Olivos, Lima",
              ano: 2025,
              descripcion: "Renovación de pavimento y vereda, construcción de obras exteriores en el AA.HH Nueva Amistad, primera etapa, mejorando el espacio público en múltiples manzanas residenciales.",
              rubro: "Infraestructura Peatonal",
-             image: "images/vereda_4.jpg"
+             image: "images/vereda_4.jpg",
+             galeria:['vereda_4.jpg']
 
            }
+    ],
 
-             ],
+             
 
     // SERVICIOS
     servicios: [
